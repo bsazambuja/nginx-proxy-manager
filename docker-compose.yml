@@ -9,6 +9,7 @@ services:
       - '80:80' # Public HTTP Port
       - '443:443' # Public HTTPS Port
       - '81:81' # Admin Web Port
+      - '1514:1514' # Admin Web
       # Add any other Stream port you want to expose
       # - '21:21' # FTP
     environment:
