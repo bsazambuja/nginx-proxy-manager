@@ -3,6 +3,7 @@ version: '3.8'
 services:
   app:
     image: 'jc21/nginx-proxy-manager:latest'
+    network_mode: bridge
     restart: unless-stopped
     volumes:
       - /home/ubuntu/nginx-proxy-manager/data:/data
@@ -21,5 +22,4 @@ services:
         limits:
           cpus: "0.1"
           memory: 256M
-    networks:
-      - bridge
+
