@@ -32,3 +32,8 @@ services:
       MYSQL_DATABASE: 'npm'
     volumes:
       - ./mysql:/var/lib/mysql
+      
+   logging:
+     driver: "gelf"
+     options:
+       gelf-address: "udp://log.labsecurity.dev.br"
